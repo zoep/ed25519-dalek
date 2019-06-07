@@ -16,7 +16,8 @@ exclude = [ ".gitignore", "TESTVECTORS", "res/*" ]
 travis-ci = { repository = "dalek-cryptography/ed25519-dalek", branch = "master"}
 
 [dependencies.curve25519-dalek]
-version = "1"
+git = "https://github.com/huitseeker/curve25519-dalek.git"
+branch = "fiat_u64_backend"
 default-features = false
 
 [dependencies.rand]
@@ -55,5 +56,6 @@ nightly = ["curve25519-dalek/nightly", "rand/nightly", "clear_on_drop/nightly"]
 asm = ["sha2/asm"]
 yolocrypto = ["curve25519-dalek/yolocrypto"]
 u64_backend = ["curve25519-dalek/u64_backend"]
+fiat_u64_backend = ["curve25519-dalek/fiat_u64_backend"]
 u32_backend = ["curve25519-dalek/u32_backend"]
 avx2_backend = ["curve25519-dalek/avx2_backend"]
